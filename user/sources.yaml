@@ -1,0 +1,57 @@
+# 免费源清单（设计 §4.1 格式；非凭据文件，可随 skill 分发与 git 跟踪）
+#
+# 通道序 = 初始降级序（direct → jsdelivr → ghproxy）；运行时按上次成功通道
+# 优选（记录于 var/runtime.json.last_channel，由 providers.js 维护）。
+# 三通道 URL 均来自 r2 报告 §1.1 实测路径；分支名经 GitHub API
+# default_branch 核对（ermaozi=main / mahdibland=master / zhuhaiuk=main）。
+# 仓库改名/消失是常态（r2 §1.1 NOT_FOUND 实测）——直接编辑本文件增删源/通道，
+# update 立即生效，零代码更新。
+version: 1
+sources:
+  - name: ermaozi
+    channels:
+      direct: https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/clash.yml
+      jsdelivr: https://cdn.jsdelivr.net/gh/ermaozi/get_subscribe@main/subscribe/clash.yml
+      ghproxy: https://gh-proxy.com/https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/clash.yml
+    max_nodes: 2000
+  - name: mahdibland
+    channels:
+      direct: https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/sub/sub_merge_yaml.yml
+      jsdelivr: https://cdn.jsdelivr.net/gh/mahdibland/V2RayAggregator@master/sub/sub_merge_yaml.yml
+      ghproxy: https://gh-proxy.com/https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/sub/sub_merge_yaml.yml
+    max_nodes: 5000    # 实测常态 4684 节点（2026-11-01 三通道一致），任务书默认 2000
+                       # 会常态性拒绝该源；校准至 5000 容纳已知合法源体量，
+                       # 防恶意超大源的硬兜底仍由 20MB body 上限承担（待编排器确认）
+  - name: zhuhaiuk
+    channels:
+      direct: https://raw.githubusercontent.com/zhuhaiuk/free-nodes/main/clash_config.yaml
+      jsdelivr: https://cdn.jsdelivr.net/gh/zhuhaiuk/free-nodes@main/clash_config.yaml
+      ghproxy: https://gh-proxy.com/https://raw.githubusercontent.com/zhuhaiuk/free-nodes/main/clash_config.yaml
+    max_nodes: 2000
+  # ── t5 URI 型源（format: uri；三通道实测 2026-11-01，r2 §1.1 清单）──
+  # barryfar：Sub1.txt 实测 ~494 行（ss 456 含 2022 系 cipher / vless / hy2）；
+  #   direct 超时常态，jsdelivr+ghproxy 可达（首拉由通道序自动降级）
+  - name: barryfar
+    format: uri
+    channels:
+      direct: https://raw.githubusercontent.com/barry-far/V2ray-Config/main/Sub1.txt
+      jsdelivr: https://cdn.jsdelivr.net/gh/barry-far/V2ray-Config@main/Sub1.txt
+      ghproxy: https://gh-proxy.com/https://raw.githubusercontent.com/barry-far/V2ray-Config/main/Sub1.txt
+    max_nodes: 2000
+  # psg：config.txt 实测 ~316 行（vless 265 / vmess 30 / ss 21），15 分钟级高频更新
+  - name: psg
+    format: uri
+    channels:
+      direct: https://raw.githubusercontent.com/itsyebekhe/PSG/main/config.txt
+      jsdelivr: https://cdn.jsdelivr.net/gh/itsyebekhe/PSG@main/config.txt
+      ghproxy: https://gh-proxy.com/https://raw.githubusercontent.com/itsyebekhe/PSG/main/config.txt
+    max_nodes: 2000
+  # ermaozi-uri：同仓 v2ray.txt（URI 形态，与上面 clash.yml 互为冗余）；
+  #   实测 ~72-79 行（vless/vmess/ss/trojan 混合），direct+jsdelivr 可达、ghproxy 404
+  - name: ermaozi-uri
+    format: uri
+    channels:
+      direct: https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/v2ray.txt
+      jsdelivr: https://cdn.jsdelivr.net/gh/ermaozi/get_subscribe@main/subscribe/v2ray.txt
+      ghproxy: https://gh-proxy.com/https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/v2ray.txt
+    max_nodes: 2000

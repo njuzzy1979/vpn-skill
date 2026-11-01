@@ -1,0 +1,345 @@
+# 生成时间: 2026-11-01T12:55:30.519Z
+# 口径: 仅免费节点（订阅节点不重复导出），按最近一次测得延迟（毫秒）升序，前 46 / 免费候选共 46 个
+proxies:
+  - name: "[free:zhuhaiuk]JP - zhuhai.uk 02"
+    type: http
+    server: fan.571589.xyz
+    port: 443
+    username: "null"
+    password: "null"
+    tls: true
+    sni: fan.571589.xyz
+  - name: "[free:zhuhaiuk]TW - zhuhai.uk"
+    type: anytls
+    server: er8u54dh.df6h451rh.xin
+    port: 443
+    password: 0324fbc29561
+    udp: true
+    sni: px.ads.linkedin.com
+    skip-cert-verify: true
+  - name: "[free:zhuhaiuk]SG - zhuhai.uk"
+    type: socks5
+    server: 47.236.168.243
+    port: 1080
+    username: "8888"
+    password: "8888"
+  - name: "[free:zhuhaiuk]TW - zhuhai.uk 02"
+    type: anytls
+    server: er8u54dh.df6h451rh.xin
+    port: 443
+    password: 0324fbc29561
+    udp: true
+    skip-cert-verify: true
+  - name: "[free:ermaozi-uri]🇩🇪 德国 | DEU"
+    type: vless
+    server: hw14.roghanmo.com
+    port: 465
+    uuid: 98aa35fc-7d2f-4744-a91b-7e33b4fdd9c8
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: hw14.roghanmo.com
+    tls: true
+    servername: hw14.roghanmo.com.
+    client-fingerprint: chrome
+    alpn:
+      - http/1.1
+  - name: "[free:zhuhaiuk]DE - zhuhai.uk 05"
+    type: http
+    server: 158.173.154.1
+    port: 9002
+    username: "null"
+    password: "null"
+    tls: true
+    skip-cert-verify: true
+  - alpn:
+      - http/1.1
+    client-fingerprint: chrome
+    name: "[free:ermaozi]🇩🇪[www.v2nodes.com] vless-DE-1... #2"
+    network: ws
+    port: 465
+    server: hw14.roghanmo.com
+    servername: hw14.roghanmo.com.
+    tls: true
+    type: vless
+    uuid: 98aa35fc-7d2f-4744-a91b-7e33b4fdd9c8
+    ws-opts:
+      headers:
+        Host: hw14.roghanmo.com
+      path: /
+  - name: "[free:zhuhaiuk]NL - zhuhai.uk"
+    type: http
+    server: 185.238.170.10
+    port: 443
+    username: "null"
+    password: "null"
+    tls: true
+    skip-cert-verify: true
+  - name: "[free:zhuhaiuk]DE - zhuhai.uk 04"
+    type: http
+    server: 158.173.154.1
+    port: 9002
+    tls: true
+    skip-cert-verify: true
+  - name: "[free:zhuhaiuk]NL - zhuhai.uk 03"
+    type: http
+    server: 185.93.106.214
+    port: 443
+    username: "null"
+    password: "null"
+    tls: true
+    skip-cert-verify: true
+  - name: "[free:zhuhaiuk]DE - zhuhai.uk 03"
+    type: http
+    server: 158.173.154.4
+    port: 9002
+    tls: true
+    sni: 158.173.154.4
+    skip-cert-verify: true
+  - name: "[free:zhuhaiuk]LV - zhuhai.uk"
+    type: http
+    server: 185.219.159.16
+    port: 443
+    tls: true
+    skip-cert-verify: true
+  - name: "[free:zhuhaiuk]FR - zhuhai.uk"
+    type: http
+    server: 80.124.109.22
+    port: 8090
+    tls: true
+    skip-cert-verify: true
+  - name: "[free:zhuhaiuk]RU - zhuhai.uk"
+    type: http
+    server: chalo-ru.nexorcdn.com
+    port: 27402
+    username: ef37886e2aacd6fa622e3de3810299c2
+    password: 9jkvAVV-9ufV6IGd
+    tls: true
+    sni: chalo-ru.nexorcdn.com
+  - name: "[free:zhuhaiuk]PL - zhuhai.uk"
+    type: http
+    server: 31.186.220.204
+    port: 443
+    tls: true
+    skip-cert-verify: true
+  - name: "[free:zhuhaiuk]FR - zhuhai.uk 03"
+    type: http
+    server: 82.66.235.221
+    port: 443
+    tls: true
+    skip-cert-verify: true
+  - name: "[free:zhuhaiuk]IL - zhuhai.uk"
+    type: http
+    server: 62.90.77.30
+    port: 443
+    tls: true
+    skip-cert-verify: true
+  - name: "[free:ermaozi]🇮🇹_IT_意大利_1"
+    type: ss
+    server: 202.50.253.72
+    port: 19999
+    cipher: aes-256-gcm
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    skip-cert-verify: true
+    udp: true
+  - name: "[free:barryfar]@appsooner کانال تلگرام 🕊️"
+    type: ss
+    server: 202.50.253.18
+    port: 19999
+    cipher: aes-256-gcm
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  - name: "[free:mahdibland]🇮🇹IT-202.50.253.18-0130"
+    server: 202.50.253.18
+    port: 19999
+    type: ss
+    cipher: aes-256-gcm
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  - name: "[free:barryfar]@vpnbaz🍂"
+    type: ss
+    server: 202.50.253.63
+    port: 19999
+    cipher: aes-256-gcm
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  - name: "[free:psg]🇮🇹 IT | SS | @outlinereleasedkey #1 [fast]"
+    type: ss
+    server: 202.50.253.27
+    port: 19999
+    cipher: aes-256-gcm
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  - name: "[free:zhuhaiuk]PL - zhuhai.uk 02"
+    type: vless
+    server: 87.242.119.253
+    port: 443
+    uuid: aba9cdd4-026c-0001-87a9-9b3e5f24dd82
+    tls: true
+    servername: hvtlr-ru-47sb.fade.mom
+    client-fingerprint: qq
+  - name: "[free:ermaozi-uri]🇮🇹 意大利 | ITA"
+    type: ss
+    server: 202.50.253.27
+    port: 19999
+    cipher: aes-256-gcm
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  - name: "[free:ermaozi-uri]🇮🇹 意大利 | ITA #3"
+    type: ss
+    server: 202.50.253.99
+    port: 19999
+    cipher: aes-256-gcm
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  - name: "[free:ermaozi-uri]🇮🇹_IT_意大利 #2"
+    type: ss
+    server: 202.50.253.72
+    port: 19999
+    cipher: aes-256-gcm
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  - name: "[free:ermaozi]🇮🇹_IT_意大利"
+    type: ss
+    server: 202.50.253.81
+    port: 19999
+    cipher: aes-256-gcm
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    skip-cert-verify: true
+    udp: true
+  - name: "[free:ermaozi-uri]🇮🇹 意大利 | ITA #2"
+    type: ss
+    server: 202.50.253.63
+    port: 19999
+    cipher: aes-256-gcm
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  - alpn:
+      - http/1.1
+    client-fingerprint: chrome
+    name: "[free:ermaozi]🇩🇪[www.v2nodes.com] vless-DE-1... #9"
+    network: ws
+    port: 443
+    server: 195.141.65.98
+    servername: 148-253-210-191.sslip.io
+    tls: true
+    type: vless
+    uuid: 53f03acd-fec1-6685-fc8f-03baf9550cb8
+    ws-opts:
+      headers:
+        Host: 148-253-210-191.sslip.io
+      path: /test-ws
+  - name: "[free:ermaozi-uri]🇺🇸 美国 | USA"
+    type: ss
+    server: 202.50.253.36
+    port: 19999
+    cipher: aes-256-gcm
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  - name: "[free:ermaozi-uri]🇮🇹 意大利 | ITA #4"
+    type: ss
+    server: 202.50.253.90
+    port: 19999
+    cipher: aes-256-gcm
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  - name: "[free:ermaozi]🇮🇹_IT_意大利_4"
+    type: ss
+    server: 202.50.253.99
+    port: 19999
+    cipher: aes-256-gcm
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    skip-cert-verify: true
+    udp: true
+  - name: "[free:ermaozi-uri]🇮🇹 意大利 | ITA #5"
+    type: ss
+    server: 202.50.253.72
+    port: 19999
+    cipher: aes-256-gcm
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  - name: "[free:barryfar]@FarazV2ray"
+    type: ss
+    server: 202.50.253.54
+    port: 19999
+    cipher: aes-256-gcm
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  - name: "[free:ermaozi-uri]🇮🇹_IT_意大利"
+    type: ss
+    server: 202.50.253.81
+    port: 19999
+    cipher: aes-256-gcm
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  - alpn:
+      - h3
+    auth-str: dongtaiwang.com
+    down: 55 Mbps
+    name: "[free:ermaozi]https://github.com/*********-*..."
+    port: 24667
+    protocol: udp
+    server: 62.210.28.175
+    skip-cert-verify: true
+    sni: bing.com
+    type: hysteria
+    up: 11 Mbps
+  - name: "[free:zhuhaiuk]JP - zhuhai.uk"
+    type: http
+    server: fan.571589.xyz
+    port: 443
+    tls: true
+    sni: fan.571589.xyz
+    skip-cert-verify: true
+  - name: "[free:ermaozi-uri]🇮🇹_IT_意大利 #5"
+    type: ss
+    server: 202.50.253.99
+    port: 19999
+    cipher: aes-256-gcm
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  - name: "[free:zhuhaiuk]ID - zhuhai.uk"
+    type: http
+    server: 103.86.117.202
+    port: 443
+    tls: true
+    skip-cert-verify: true
+  - name: "[free:barryfar]@FarazV2ray #2"
+    type: ss
+    server: 202.50.253.81
+    port: 19999
+    cipher: aes-256-gcm
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  - name: "[free:barryfar]YFZ 117 @Outline_Vpn"
+    type: ss
+    server: 202.50.253.27
+    port: 19999
+    cipher: aes-256-gcm
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  - name: "[free:barryfar]@FarazV2ray #3"
+    type: ss
+    server: 202.50.253.36
+    port: 19999
+    cipher: aes-256-gcm
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  - name: "[free:ermaozi]🇮🇹_IT_意大利_3"
+    type: ss
+    server: 202.50.253.90
+    port: 19999
+    cipher: aes-256-gcm
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    skip-cert-verify: true
+    udp: true
+  - name: "[free:ermaozi-uri]🇮🇹_IT_意大利 #4"
+    type: ss
+    server: 202.50.253.90
+    port: 19999
+    cipher: aes-256-gcm
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  - name: "[free:zhuhaiuk]DE - zhuhai.uk"
+    type: http
+    server: fan.973511.xyz
+    port: 443
+    username: "null"
+    password: "null"
+    tls: true
+  - name: "[free:ermaozi-uri]🇳🇱 荷兰 | NLD #2"
+    type: vless
+    server: 200.169.184.168
+    port: 443
+    uuid: 6036c28a-8db2-432e-8118-ff0c16641ad0
+    flow: xtls-rprx-vision
+    tls: true
+    servername: net.formatgo.ru
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: QnaizqXrXA0e4XihP_5Nf1z1aOOf0obBoyJ8QY_03kw
+      short-id: 9d0e1b6bf9c5eddb
+

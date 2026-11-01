@@ -1,0 +1,5 @@
+# R2 隔离策略（设计 §4.1 gitignore 策略汇总）
+user/subscriptions.yaml
+var/
+logs/
+bin/*.exe*
