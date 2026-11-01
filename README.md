@@ -20,11 +20,15 @@ node scripts/vpn.js start
 
 1. **机场官网**：登录你购买机场的账户页，订阅/导入页面可随时重新复制链接（最正统来源）。
 2. **FlClash 界面**：如果你在用 FlClash，其配置/订阅页面通常能查看或复制订阅链接。
-3. **从 FlClash 本机数据读取**（登录态自动维护链接、界面上看不到时）：FlClash 把订阅 URL 存在本机
-   `%APPDATA%\com.follow\clash\` 目录下的 `shared_preferences.json` 或 `database.sqlite` 中——
-   前者是文本文件可直接搜索 `http` 字符串；后者可用任意 SQLite 工具查看。
+3. **从 FlClash 本机数据读取**（界面上看不到时）：FlClash 把订阅 URL 存在本机
+   `%APPDATA%\com.follow\clash\database.sqlite` 的 profile 表中（实测唯一存储位），
+   用任意 SQLite 工具查看即可——URL 记录旁常伴有 `upload/download/total/expire` 流量统计 JSON，可作佐证。
    **注意**：此操作读取的是你自己机器上你自己的数据，属正常运维；找到后用上面的 `setup` 命令录入。
 
+> **换过订阅或机场迁移后记得重录**：订阅服务更换域名很常见——FlClash 里的当前链接若与你当初录入 vpn-skill 的不同，
+> 旧 URL 会**静默失效**（节点缓存还在但不再更新）。`update`/`doctor` 报订阅拉取失败时，先按上述途径核对当前链接，
+> 再用 `setup` 重录一次即可。
+>
 > 订阅 URL 是你的付费凭据：录入后它只存在于本机两个被 gitignore 的文件中；即便把本仓库推到公开远端，它也不会离开你的机器（`.gitignore` 已覆盖 + 提交前建议做一次净化 grep）。
 
 日常用 `start` / `stop` 即可；状态看 `status`。
