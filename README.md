@@ -9,11 +9,23 @@
 node scripts/vpn.js bootstrap
 
 # 2. 配置机场订阅（URL 只存本机 user/subscriptions.yaml，不进任何日志）
-node scripts/vpn.js setup --sub <你的订阅URL>
+node scripts/vpn.js setup            # 交互式输入（推荐：URL 不经命令行与任何日志）
+# 或：node scripts/vpn.js setup --sub <你的订阅URL>
 
 # 3. 启动（首启含免费源拉取，稍慢；完成后输出代理端口与前缀模板）
 node scripts/vpn.js start
 ```
+
+### 没有现成订阅 URL？三种获取途径
+
+1. **机场官网**：登录你购买机场的账户页，订阅/导入页面可随时重新复制链接（最正统来源）。
+2. **FlClash 界面**：如果你在用 FlClash，其配置/订阅页面通常能查看或复制订阅链接。
+3. **从 FlClash 本机数据读取**（登录态自动维护链接、界面上看不到时）：FlClash 把订阅 URL 存在本机
+   `%APPDATA%\com.follow\clash\` 目录下的 `shared_preferences.json` 或 `database.sqlite` 中——
+   前者是文本文件可直接搜索 `http` 字符串；后者可用任意 SQLite 工具查看。
+   **注意**：此操作读取的是你自己机器上你自己的数据，属正常运维；找到后用上面的 `setup` 命令录入。
+
+> 订阅 URL 是你的付费凭据：录入后它只存在于本机两个被 gitignore 的文件中；即便把本仓库推到公开远端，它也不会离开你的机器（`.gitignore` 已覆盖 + 提交前建议做一次净化 grep）。
 
 日常用 `start` / `stop` 即可；状态看 `status`。
 
@@ -52,7 +64,7 @@ node scripts/vpn.js export          # 默认前 100
 node scripts/vpn.js export --top 5  # 自定义数量
 ```
 
-把该文件拷贝到 FlClash 等客户端导入即可。**注意：文件内是完整节点凭据（服务器地址/密码），仅供本机导入使用，勿分享/上传**；延迟数据来自运行中的内核，内核未启动时 export 会提示先 `start`。
+把该文件拷贝到 FlClash 等客户端导入即可。文件内是**免费节点**凭据（源自公开聚合源，随仓库公开分发无隐私问题；订阅节点经四重防御结构上不可达此文件）；延迟数据来自运行中的内核，内核未启动时 export 会提示先 `start`。
 
 ## 三条红线承诺
 
